@@ -1,0 +1,28 @@
+<?
+
+class UserController extends BaseController {
+
+/**
+* Show the profile for the given user.
+*/
+//	public function showProfile($id)
+	public function register(){
+		//$user = User::find($id);
+
+		//return View::make('user.profile', array('user' => $user));
+	   //return View::make('hello');
+	   //$this->layout->content = View::make('usersRegister');
+	   
+
+	return View::make('usersRegister');
+	//return View::make('users');
+    //return View::make('profile');
+//	return View::make('bank');
+
+	}
+
+
+}
+
+
+?>

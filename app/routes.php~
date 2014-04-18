@@ -1,0 +1,122 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the Closure to execute when that URI is requested.
+|
+*/
+
+
+/*------------ 
+/	tests
+/	routs to not be used and also removed later
+*/
+// look controllers are like routes but mwith more files!
+Route::get('/test', 'HomeController@showWelcome');
+
+
+
+/*------------ 
+/	root
+*/
+Route::get('/', function()
+{
+	return View::make('browse');
+});
+
+Route::get('/user/register', 'UserController@showProfile');
+
+
+/*------------ 
+/	user 
+*/
+
+/*
+Route::get('users', function()
+{
+	$users = User::all();
+	return View::make('users')->with('users', $users);
+});
+
+*/
+Route::controller('users', 'UsersController');
+
+/*
+Route::get('users/register', function()
+{
+   return View::make('usersRegister');
+});
+*/
+
+
+
+
+
+/*--------- 
+/	profiles
+*/
+
+Route::get('profile', function()
+{
+    return View::make('profile');
+});
+
+
+/*--------- 
+/	account management
+*/
+
+
+Route::get('manage/account', function()
+{
+    return View::make('manage');
+});
+
+
+Route::get('manage/profile/questions', function()
+{
+    return View::make('profileManage');
+});
+
+
+Route::get('manage/profile/info', function()
+{
+    return View::make('profileInfo');
+});
+
+
+Route::get('manage/ads', function()
+{
+    return View::make('adManage');
+});
+
+
+Route::get('manage/ads/edit', function()
+{
+    return View::make('adEdit');
+});
+
+
+Route::get('manage/photos', function()
+{
+    return View::make('photoManage');
+});
+
+
+Route::get('manage/bank', function()
+{
+    return View::make('bank');
+});
+
+
+
+
+
+
+
+
