@@ -17,7 +17,6 @@ Route::get ('/test/register', 	'TestController@register');
 Route::get ('/test/list',	 	'TestController@listUsers');
 Route::get ('/test/create', 	'TestController@create');
 
-
 /*------------ 
 /	root
 */
